@@ -1,0 +1,19 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1>Diaz Boutet Santiago Simulacro peliculas</h1>
+
+    Nombre pelicula a buscar:<br>
+    <input type="text" name="firstname"[(ngModel)]="nombre">
+    <br>
+    <input type="button" class="btn btn-secondary" value="buscar " (click)="Buscar()">
+
+
+  </div>
+</section>
+<div class="container">
+  <div class="row">
+<app-tablapelicula [listaPeliculas]="peliculas" (mandaPelicula)="Detallar($event)" class="col-9"></app-tablapelicula>
+<app-mostrar class="col-3" [pais]="aMostrar"></app-mostrar>
+</div>
+</div>
+

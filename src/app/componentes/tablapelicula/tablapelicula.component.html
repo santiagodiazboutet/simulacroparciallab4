@@ -1,0 +1,23 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Tipo</th>
+      <th scope="col"> fecha de estreno</th>
+      <th scope="col"> cantidad de publico</th>
+      <th scope="col"> foto de la pelicula</th>
+      <th scope="col"> boton accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of listaPeliculas">
+      <td>{{item.nombre}}</td>
+      <td>{{item.tipo}}</td>
+      <td>{{item.fecha_estreno}}</td>
+      <td>{{item.cant_publico}}</td>
+      <td> <img src="{{item.img_src}}" alt="" width="50px" srcset=""></td>
+      <p><a class="btn btn-secondary"  role="button" (click)="seleccionaPelicula(item)">Modificar y eso</a></p>
+    </tr>
+  </tbody>
+</table>

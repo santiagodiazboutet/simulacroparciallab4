@@ -1,0 +1,13 @@
+<div class="col-md-4" *ngIf="pais">
+  <h2>Mostrar</h2>
+  <p>Nombre pelicula.</p>
+  <input type="text" disabled [(ngModel)]="pais.nombre" *ngIf="pais">
+  <p>Genero.</p>
+  <input type="text" disabled [(ngModel)]="pais.tipo" *ngIf="pais">
+  <p>Fecha de estreno.</p>
+  <input type="text" disabled [(ngModel)]="pais.fecha_estreno" *ngIf="pais">
+  <p>Cantidad de publico.</p>
+  <input type="text" disabled [(ngModel)]="pais.cant_publico" *ngIf="pais">
+ <img src="{{pais.img_src}}" alt="" width="50px" srcset="">
+  <p><a class="btn btn-secondary" role="button"(click)="accion()">Limpiar Vista »</a></p>
+</div>
